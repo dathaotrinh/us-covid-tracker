@@ -1,0 +1,28 @@
+<h4>Daily Report {{state}}</h4>
+
+<div class="div" style='overflow: auto; height: 450px;'>
+    <table class="table table-borderless" style="color: white;">
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Positive Increased</th>
+                <th scope="col">Negative Increased</th>
+                <th scope="col">Total Test Result Increased</th>
+
+                <th scope="col">Hospitalized Increased</th>
+                <th scope="col">Death Increased</th>
+
+            </tr>
+        </thead>
+        <tbody *ngFor="let countryE of dailyState">
+            <tr>
+                <td scope='row'>{{countryE.date}}</td>
+                <td>{{countryE.positiveIncrease}}</td>
+                <td>{{countryE.negativeIncrease}}</td>
+                <td>{{countryE.totalTestResultsIncrease}}</td>
+                <td>{{countryE.hospitalizedIncrease}}</td>
+                <td>{{countryE.deathIncrease}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

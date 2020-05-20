@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">State</th>
+            <th scope="col">Positive</th>
+            <th scope="col">Negative</th>
+            <th scope="col">Total Test Results</th>
+            <th scope="col">Recovered</th>
+            <th scope="col">Deaths</th>
+            <th scope="col">Hospitalized Currently</th>
+            <th scope="col">Hospitalized Cummulative</th>
+
+        </tr>
+    </thead>
+    <tbody *ngFor="let countryE of countryList, let i = index">
+        <tr [ngClass]="{'bg-danger': countryE.state===state}">
+            <th scope="row">{{i+1}}</th>
+            <td>{{countryE.state}}</td>
+            <td>{{countryE.positive}}</td>
+            <td>{{countryE.negative}}</td>
+            <td>{{countryE.totalTestResults}}</td>
+            <td>{{countryE.recovered}}</td>
+            <td>{{countryE.death}}</td>
+            <td>{{countryE.hospitalizedCurrently}}</td>
+            <td>{{countryE.hospitalizedCumulative}}</td>
+
+        </tr>
+    </tbody>
+</table>

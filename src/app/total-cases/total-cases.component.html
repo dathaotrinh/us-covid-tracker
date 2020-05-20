@@ -1,0 +1,21 @@
+<div class="row mt-4" style="background-color: #0f0e17;" *ngFor="let detail of summary">
+    <div class="col-3">
+        <h6>CONFIRMED</h6>
+        <h1 style="color:#f25f4c;" [countUp]='detail.positive'></h1>
+    </div>
+    <div class="col-3">
+        <h6>NEGATIVE</h6>
+        <h1 style="color:yellow;" [countUp]='detail.negative'></h1>
+    </div>
+    <div class="col-3">
+        <h6>RECOVERED</h6>
+        <h1 style="color:green;" [countUp]='detail.recovered'></h1>
+    </div>
+    <div class="col-3">
+        <h6>DEATHS</h6>
+        <h1 style="color:red;" [countUp]='detail.death'></h1>
+    </div>
+
+    <p>Last Updated : {{detail.lastModified | date}}</p>
+
+</div>
