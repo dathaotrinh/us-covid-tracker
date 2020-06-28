@@ -16,7 +16,8 @@ export class DailyReportComponent implements OnInit {
     this.geoService.selectedState.subscribe(data => {
       this.state = data;
       this.dailyState = [];
-      this.dailyService.getStateDailyReport(data)
+      const stateName = data.toLowerCase();
+      this.dailyService.getStateDailyReport(stateName)
         .subscribe(res => {
           console.log(res);
           this.dailyState.push(...res);

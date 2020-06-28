@@ -10,7 +10,7 @@ export class StateDailyService  {
 
   constructor(private http: HttpClient, private geoService: GeoChartService) { }
 
-  getStateDailyReport(state) {
+  getStateDailyReport(state: string) {
       return this.http.get<DailyState[]>('https://covidtracking.com/api/v1/states/' + state + '/daily.json')
   }
 }

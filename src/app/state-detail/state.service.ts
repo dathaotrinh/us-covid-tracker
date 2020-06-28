@@ -21,7 +21,8 @@ export class StateService {
 
   findDataByState(data: string): Observable<Country[]> {
 
-    return this.http.get<Country[]>('https://covidtracking.com/api/v1/states/' + data + '/current.json');
+    const name = data.toLowerCase();
+    return this.http.get<Country[]>('https://covidtracking.com/api/v1/states/' + name + '/current.json');
   };
 
 }
