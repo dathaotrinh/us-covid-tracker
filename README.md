@@ -1,5 +1,7 @@
 # USCOVIDTRACKER
 
+[YOUTUBE VIDEO](https://youtu.be/n6Ftf7ngRLQ)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
 ## Development server
